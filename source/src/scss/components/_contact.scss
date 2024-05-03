@@ -1,0 +1,66 @@
+.contact {
+    background: var(--c-dark-second);
+    margin-bottom: 50rem;
+    position: relative;
+
+    .contact-container {
+        padding-top: 187rem;
+        padding-bottom: 189rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include tablet {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 50rem;
+            padding-top: 130rem;
+            padding-bottom: 130rem;
+        }
+        @include tablet-small {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 50rem;
+            padding-top: 50rem;
+            padding-bottom: 50rem;
+        }
+
+        &__title { 
+            max-width: 600rem;
+        }
+        &__btn {
+            padding: 16rem 49rem;
+        }
+    }
+    .contact-plus {
+        position: absolute;
+		right: 150rem;
+		top: 70rem;
+        @include tablet-small {
+            top: -30rem;
+            svg {
+				width: 28rem;
+				height: auto;
+			}
+        }
+        @include mobile {
+            right: 60rem;
+        }
+     }
+    .contact-circle {
+        position: absolute;
+		left: 170rem;
+		bottom: 64rem;
+        @include tablet {
+            left: 100rem;
+		    bottom: 40rem;
+        }
+        @include tablet-small {
+            left: 30rem;
+		    bottom: -50rem;
+            svg {
+                width: 39rem;
+            }
+        }
+     }
+}

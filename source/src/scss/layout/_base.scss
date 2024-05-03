@@ -1,0 +1,86 @@
+html, body {
+	height: 100%;
+}
+html {
+	font-size: 1px;
+}
+body {
+	font-size: 16rem;
+	font-family: var(--font-main);
+	background: var(--c-dark);
+	color: var(--c-white);
+
+	@include tablet {
+		&.lock {
+			overflow: hidden;
+		}
+	} 
+}
+.container {
+	max-width: 1440rem;
+	margin-inline: auto;
+	padding-inline: 123rem;
+	width: 100%;
+	position: relative;
+
+	@include desktop-small {
+		padding-inline: 60rem;
+	}
+	@include tablet-small {
+		padding-inline: 24rem;
+	}
+}
+.btn {
+	cursor: pointer;
+	border: 0;
+	outline: 0;
+	display: inline-block;
+	transition: var(--transition);
+	border-radius: 5rem;
+	font-family: var(--font-main);
+	color: var(--c-white);
+	font-size: 20rem;
+	font-weight: 700;
+	background: var(--c-blue);
+	transition: var(--transition);
+		&:hover {
+			transform: scale(1.05);
+		}
+
+	&._secondary {
+		font-size: 16rem;
+		font-weight: 400;
+		padding: 11rem 42rem;
+		background: transparent;
+		&:hover {
+			box-shadow: 0 0 7rem var(--c-text-white);
+		}
+	}
+}
+
+.title-lg {
+	font-family: var(--font-second);
+	font-size: 60rem;
+	font-weight: 400;
+	line-height: 117%;
+	color: var(--c-white);
+	
+	@include mobile {
+		font-size: 36rem;
+		line-height: 150%;
+	}
+}
+
+.title-md {
+	font-family: var(--font-second);
+	font-size: 58rem;
+	font-weight: 800;
+	line-height: 79rem;
+	@include mobile {
+		font-weight: 400;
+		font-size: 36rem;
+		line-height: 150%;
+	}
+}
+
+

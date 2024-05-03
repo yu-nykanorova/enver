@@ -1,0 +1,140 @@
+.welcome {
+    display: flex;
+    align-items: center;
+    margin-bottom: 150rem;
+    justify-content: space-between;
+    gap: 50rem;
+    
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+    }
+
+	&__info { 
+        max-width: 50%;
+        @include tablet {
+            max-width: 100%;
+        }
+    }
+	&__title { 
+        font-family: var(--font-second);
+        font-weight: 400;
+        font-size: 80rem;
+        line-height: 105%;
+        color: var(--c-white);
+        margin-bottom: 24rem;
+        @include tablet-small {
+            font-size: 70rem;
+        }
+        @include mobile {
+            font-size: 42rem;
+            line-height: 150%;
+        }
+    }
+	&__desc { 
+        font-family: var(--main-font);
+        font-weight: 400;
+        font-size: 21rem;
+        line-height: 186%;
+        letter-spacing: -0.03em;
+        color: var(--c-text-white);
+        margin-bottom: 50rem;
+    }
+	&__btn { 
+        display: flex;
+        align-items: center;
+        gap: 8rem;
+        padding: 16rem 27rem;
+        max-width: 204rem;
+    }
+
+	&__image {
+        position: relative;
+        height: 650rem;
+        width: 500rem;
+        
+    }
+
+    .empty-square {
+        position: absolute;
+        transform: rotate(24deg);
+        width: 375rem;
+        height: 375rem;
+        left: 38rem;
+        top: 170rem;
+        background: transparent;
+        border: 2rem solid var(--c-white);
+        border-radius: 22rem;
+    }
+
+    .filled-square {
+        position: absolute;
+        transform: rotate(24deg);
+        width: 375rem;
+        height: 375rem;
+        left: 56rem;
+        top: 216rem;
+        border-radius: 22rem;
+        border: 4rem solid var(--c-white);
+        background: var(--c-blue);
+    }
+
+    .border {
+        position: absolute;
+        transform: rotate(24deg);
+        width: 375rem;
+        height: 375rem;
+        left: 56rem;
+        top: 216rem;
+        border-radius: 22rem;
+        border-bottom: 4rem solid var(--c-white);
+        border-right: 4rem solid var(--c-white);
+        background: transparent;
+    }
+
+    &__image-box {
+        position: absolute;
+        transform: rotate(24deg);
+        border-radius: 22rem;
+        width: 470rem;
+        height: 600rem;
+        left: 10rem;
+        top: -20rem;
+        overflow: hidden;
+
+        .image {
+            position: relative;
+            img {
+            transform: rotate(-24deg);
+            position: absolute;
+            top: 43rem;
+            left: 45rem;
+            }
+        }
+
+        
+    }
+}
+
+.welcome-wave {
+    position: absolute;
+    right: 680rem;
+    top: 70rem;
+}
+.welcome-circle {
+    position: absolute;
+    right: 50rem;
+    top: 30rem;
+
+ }
+.welcome-triangle { 
+    position: absolute;
+    right: 740rem;
+    bottom: 40rem;
+}
+.welcome-plus { 
+    position: absolute;
+    right: 125rem;
+    bottom: 40rem;
+}
+

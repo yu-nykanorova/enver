@@ -1,0 +1,71 @@
+.footer {
+	padding-bottom: 100rem;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include tablet {
+			flex-direction: column;
+			gap: 40rem;
+		}
+	 }
+	&__logo {
+		display: inline-flex;
+        gap: 8rem;
+		align-items: center;
+		font-family: var(--font-therd);
+		font-weight: 700;
+		font-size: 28px;
+		line-height: 140%;
+		color: var(--c-white);
+		transition: var(--transition);
+		&:hover {
+			transform: scale(1.05);
+		}
+
+        img {
+            width: 40rem;
+            height: 40rem;
+        }
+	 }
+	&__ul { 
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 40rem;
+		@include desktop-small {
+			gap: 25rem;
+		}
+		@include mobile {
+			flex-direction: column;
+			gap: 20rem;
+		}
+	}
+	&__li {
+		transition: var(--transition);
+		&:hover {
+			transform: scale(1.03);
+		}
+	}
+	&__a { 
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 18rem;
+		text-align: center;
+		color: var(--c-text-white);
+		transition: var(--transition);
+		&:hover {
+			color: var(--c-white);
+		}
+	}
+	&__copyright { 
+		font-family: var(--font-main);
+		font-weight: 400;
+		font-size: 16rem;
+		line-height: 237%;
+		letter-spacing: -0.03em;
+		text-align: right;
+		color: var(--c-text-white);
+	}
+}
