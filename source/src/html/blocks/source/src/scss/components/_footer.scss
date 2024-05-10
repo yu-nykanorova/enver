@@ -1,0 +1,30 @@
+.footer {
+	width: 100%;
+	padding: 35rem;
+	background: var(--c-dark);
+	color: var(--c-light);
+	// position: absolute;
+	// bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&__copyright {
+		font-size: 18rem;
+	 }
+
+	&__socials { 
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20rem;
+		transition: var(--transition);
+		& svg:hover {
+            path {
+                fill: var(--c-corall);
+            }
+        }
+	}
+
+	&__link { }
+}

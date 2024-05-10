@@ -1,0 +1,45 @@
+.experience {
+	&__list { 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include tablet {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20rem;
+        }
+    }
+	&__item {
+        padding: 32rem;
+        background: var(--gradient-light);
+        border-radius: 15rem;
+        box-shadow: 5rem 2rem 15rem 0 rgba(0, 0, 0, 0.25);
+        flex: 0 0 30%;
+        text-align: center;
+        align-self: stretch;
+        transition: var(--transition);
+        &:hover {
+            background: var(--gradient-dark);
+            .experience__name {
+                color: var(--c-light);
+            }
+        }
+    }
+    &__period {
+        color: var(--c-corall);
+        font-size: 30rem;
+        font-weight: 600;
+        margin-bottom: 10rem;
+    }
+	&__name {
+        color: var(--c-dark);
+        font-size: 24rem;
+        font-weight: 700;
+        margin-bottom: 10rem;
+    }
+	&__place {
+        color: var(--c-dark);
+        font-size: 18rem;
+        font-weight: 400;
+     }
+}

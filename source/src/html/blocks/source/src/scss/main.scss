@@ -1,0 +1,22 @@
+// vendors
+@import 'vendors/reset';
+
+// utils
+@import 'utils/vars';
+@import 'utils/mixins';
+
+// layout
+@import 'layout/base';
+@import 'layout/scroll';
+@import 'layout/grid';
+@import 'layout/owl.carousel';
+@import 'layout/owl.theme.default';
+
+// components
+@import 'components/header';
+@import 'components/hero';
+@import 'components/skills';
+@import 'components/experience';
+@import 'components/contact';
+@import 'components/footer';
+

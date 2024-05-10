@@ -1,0 +1,57 @@
+.skills {
+
+    &__list {
+        max-height: 300rem;
+        display: flex;
+        // align-items: center;
+        // justify-content: space-between;
+        // display: grid;
+        // grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        // grid-gap: 10rem;
+
+        @include tablet {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30rem;
+        }
+        @include mobile {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20rem;
+        }
+    }
+
+	&__item { 
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 170rem;
+        height: 100%;
+        padding: 17rem;
+        background: var(--gradient-light);
+        border-radius: 15rem;
+        box-shadow: 5rem 2rem 15rem 0 rgba(0, 0, 0, 0.25);
+        align-self: stretch;
+        text-align: center;
+        color: var(--c-dark);
+        transition: var(--transition);
+        @include tablet {
+            max-width: 250rem;
+        }
+        @include mobile {
+            max-width: auto;
+        }
+        
+        &:hover {
+            background: var(--gradient-dark);
+            color: var(--c-light);
+        }
+    }
+
+	&__item-image { 
+        display: flex;
+        justify-content: center;        
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,1 @@
+document.getElementById("footer__copyright").innerHTML = "&copy; " + new Date().getFullYear() + " All rights reserved";

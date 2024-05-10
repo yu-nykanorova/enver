@@ -1,0 +1,144 @@
+.header {
+	border-bottom: 2rem solid var(--c-dark);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 10rem 35rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(252, 252, 250, 0.8); 
+    z-index: 2;
+    @include mobile {
+        padding: 5rem 15rem;
+    }
+
+    &__logo {
+        max-width: 100rem;
+        position: relative;
+        // z-index: 4;
+    }
+
+    &__burger {
+		display: none;
+
+        &.active:before {
+            transform: rotate(45deg);
+            top: 9rem;
+            background: var(--c-light);
+        }
+        &.active:after {
+            transform: rotate(-45deg);
+            bottom: 9rem;
+            background: var(--c-light);
+        }
+        &.active span {
+            transform: scale(0);
+            background: var(--c-light);
+        }
+
+		@include tablet-small {
+			display: block;
+			position: relative;
+            cursor: pointer;
+			width: 30rem;
+			height: 20rem;
+			position: relative;
+            z-index: 4;
+			 
+			& span {
+				position: absolute;
+				background: var(--c-dark);
+				left: 0;
+				width: 100%;
+				height: 2rem;
+				top: 9rem;
+                transition: var(--transition);
+			}
+			
+			&::before,
+			&::after {
+				content: "";
+				background: var(--c-dark);
+				position: absolute;
+				width: 100%;
+				height: 2rem;
+				left: 0;
+                transition: var(--transition);
+			}
+			&::before {
+				top: 0;
+			}
+			&::after {
+				bottom: 0;
+			}
+		}
+	}
+
+    &__nav {
+        padding: 5rem;
+        transition: var(--transition);
+        overflow: auto;
+
+        @include tablet-small {
+            position: fixed;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 70%;
+            background: rgba(30, 31, 38, 0.85);
+            z-index: 3;
+            padding: 70rem 10rem 20rem 10rem;   
+        }
+
+        &.active {
+            top: 0;
+        }
+    }
+
+    &__ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30rem;
+
+        @include tablet-small {
+            flex-direction: column;
+        }
+    }
+
+    &__a {
+        color: var(--c-dark);
+        font-size: 20rem;
+        font-weight: 700;
+        transition: var(--transition);
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -2rem;
+            width: 96%;
+            height: 2rem;
+            left: 2%;
+            background: var(--c-corall);
+            transform: scale(0);
+            transition: var(--transition);
+        }
+
+        &:hover {
+            color: var(--c-corall);
+        }
+
+        &:hover::before {
+            transform: scale(1);
+        }
+
+        @include tablet-small {
+            color: var(--c-light);
+            font-size: 30rem;
+        }
+    }
+}

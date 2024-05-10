@@ -1,0 +1,110 @@
+.hero {
+    margin-top: 120rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--gradient-light);
+    padding: 20rem;
+    border-radius: 35rem;
+    box-shadow: 5rem 2rem 15rem 0 rgba(0, 0, 0, 0.25);
+    @include tablet-small {
+        flex-direction: column;
+    }
+
+	&__info { 
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include tablet-small {
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+	&__title {
+        color: var(--c-dark);
+        font-size: 48rem;
+        font-weight: 700;
+        margin-bottom: 15rem;
+        text-shadow: 5rem 2rem 5rem rgba(0, 0, 0, 0.25);
+        @include tablet-small {
+            font-size: 44rem;
+            font-weight: 600;
+        }
+        h1 {
+            color: var(--c-corall);
+            display: inline-block;
+            font-size: 48rem;
+            font-weight: 700;
+            @include tablet-small {
+                font-size: 44rem;
+                font-weight: 600;
+            }
+        }
+    }
+    &__desc {
+        color: var(--c-dark);
+        font-size: 30rem;
+        font-weight: 400;
+        margin-bottom: 40rem;
+        @include tablet-small {
+            margin-bottom: 25rem;
+            font-size: 28rem;
+        }
+    }
+	&__btn { 
+        color: var(--c-light);
+        font-size: 18rem;
+        font-weight: 700;
+        background: var(--c-corall);
+        padding: 15rem 25rem;
+        border-radius: 15rem;
+        max-width: 200rem;
+        text-align: center;
+        &:hover {
+            transform: scale(1.05);
+            color: var(--c-dark);
+            background: var(--gradient-dark);
+        }
+    }
+
+	&__image { 
+        max-width: 300rem;
+        padding: 20rem;
+        // background: linear-gradient(0deg, rgba(244,234,222,0.3) 0%, rgba(237,140,114,0.3) 35%, rgba(41,136,188,0.3) 100%);
+        // border-radius: 35rem;
+    }
+    &__image-box {
+        display: flex;
+        flex-shrink: 0;
+        border-radius: 40% 5%;
+        position: relative;
+        img {
+            border-radius: 40% 5%;
+            z-index: 1;
+        }
+    }
+}
+
+.image-backdrop-right, .image-backdrop-left {
+    position: absolute;
+    width: calc(100% - 10rem);
+    height: calc(100% - 10rem);
+    background: var(--c-corall);
+    border-radius: 40% 5%;
+    z-index: 0;
+}
+
+.image-backdrop-left {
+    left: 2rem;
+    top: 0;
+    background: var(--c-corall);
+    opacity: 0.4;
+}
+.image-backdrop-right {
+    right: -2rem;
+    bottom: 0;
+    background: var(--c-dark);
+    opacity: 0.8;
+}

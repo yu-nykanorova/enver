@@ -69,6 +69,34 @@
 	display: none;
 }
 
+@media screen and (max-width: 592px) {
+	.owl-carousel .owl-nav.disabled {
+		display: flex;
+		justify-content: center;
+		gap: 12rem;
+	}
+	.owl-carousel .owl-nav.disabled .owl-prev,
+	.owl-carousel .owl-nav.disabled .owl-next {
+		width: 38rem;
+		height: 38rem;
+		border-radius: 50%;
+		background: var(--c-blue);
+		font-size: 40rem;
+		position: relative;
+	}
+	.owl-carousel .owl-nav.disabled .owl-prev span {
+		position: absolute;
+		top: -6rem;
+		right: 14rem;
+	}
+	.owl-carousel .owl-nav.disabled .owl-next span {
+		position: absolute;
+		top: -6rem;
+		left: 14rem;
+	}
+}
+
+
 .owl-carousel .owl-nav .owl-prev,
 .owl-carousel .owl-nav .owl-next,
 .owl-carousel .owl-dot {
@@ -302,6 +330,13 @@
 	margin-top: 50px;
 	justify-content: center;
 	align-items: center;
+}
+
+@media screen and (max-width: 592px) {
+	.owl-dots {
+		display: none;
+	}
+	
 }
 
 .owl-theme .owl-dots .owl-dot {
