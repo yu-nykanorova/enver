@@ -1,1 +1,0 @@
-document.getElementById("footer__copyright").innerHTML = "&copy; " + new Date().getFullYear() + " Enver," + " All Rights Reserved";

@@ -1,0 +1,298 @@
+.welcome {
+    display: flex;
+    align-items: center;
+    margin-top: 130rem;
+    margin-bottom: 150rem;
+    justify-content: space-between;
+    gap: 50rem;
+    
+    @include tablet {
+        display: flex;
+        flex-direction: column; 
+    }
+    @include mobile {
+        margin-bottom: 80rem; 
+    }
+
+	&__info { 
+        max-width: 50%;
+        position: relative;
+        @include tablet {
+            max-width: 100%;
+        }
+    }
+	&__title { 
+        font-family: var(--font-second);
+        font-weight: 400;
+        font-size: 80rem;
+        line-height: 105%;
+        color: var(--c-white);
+        margin-bottom: 24rem;
+        @include desktop-small {
+            font-size: 70rem;
+        }
+        @include mobile {
+            font-size: 42rem;
+            line-height: 150%;
+        }
+    }
+	&__desc { 
+        font-family: var(--main-font);
+        font-weight: 400;
+        font-size: 21rem;
+        line-height: 186%;
+        letter-spacing: -0.03em;
+        color: var(--c-text-white);
+        margin-bottom: 50rem;
+    }
+	&__btn { 
+        display: flex;
+        align-items: center;
+        gap: 8rem;
+        padding: 16rem 27rem;
+        max-width: 204rem;
+    }
+
+	&__image {
+        position: relative;
+        height: 650rem;
+        width: 500rem;
+        @include mobile {
+            height: 500rem;
+            width: 450rem;
+        }
+    }
+
+    .empty-square {
+        position: absolute;
+        transform: rotate(24deg);
+        width: 375rem;
+        height: 375rem;
+        left: 38rem;
+        top: 170rem;
+        background: transparent;
+        border: 2rem solid var(--c-white);
+        border-radius: 22rem;
+        @include desktop-small {
+            height: 280rem;
+            width: 280rem;
+        }
+        @include tablet {
+            left: 88rem;
+        }
+        @include mobile {
+            height: 230rem;
+            width: 230rem;
+            left: 108rem;
+        }
+    }
+
+    .filled-square {
+        position: absolute;
+        transform: rotate(24deg);
+        width: 375rem;
+        height: 375rem;
+        left: 56rem;
+        top: 216rem;
+        border-radius: 22rem;
+        border: 4rem solid var(--c-white);
+        background: var(--c-blue);
+        @include desktop-small {
+            height: 280rem;
+            width: 280rem;
+        }
+        @include tablet {
+            left: 106rem;
+        }
+        @include mobile {
+            height: 230rem;
+            width: 230rem;
+            left: 126rem;
+        }
+    }
+
+    .border {
+        position: absolute;
+        transform: rotate(24deg);
+        width: 375rem;
+        height: 375rem;
+        left: 56rem;
+        top: 216rem;
+        border-radius: 22rem;
+        border-bottom: 4rem solid var(--c-white);
+        border-right: 4rem solid var(--c-white);
+        background: transparent;
+        @include desktop-small {
+            height: 280rem;
+            width: 280rem;
+        }
+        @include tablet {
+            left: 106rem;
+        }
+        @include mobile {
+            height: 230rem;
+            width: 230rem;
+            left: 126rem;
+        }
+    }
+
+    &__image-box {
+        position: absolute;
+        transform: rotate(24deg);
+        border-radius: 22rem;
+        width: 470rem;
+        height: 600rem;
+        left: 10rem;
+        top: -20rem;
+        overflow: hidden;
+        @include desktop-small {
+            height: 363rem;
+            width: 380rem;
+            left: -25rem;
+            top: 112rem;
+        }
+        @include tablet {
+            height: 400rem;
+            width: 423rem;
+            left: 16rem;
+            top: 119rem;
+        }
+        @include mobile {
+            height: 320rem;
+            width: 320rem;
+            left: 56rem;
+            top: 109rem;
+        }
+
+        .image {
+            position: relative;
+            border-radius: 22rem;
+            @include desktop-small {
+                overflow: hidden;
+                height: 363rem;
+                width: 380rem;
+            }
+            img {
+                transform: rotate(-24deg);
+                position: absolute;
+                top: 43rem;
+                left: 45rem;
+                @include desktop-small {
+                    height: 400rem;
+                    width: auto;
+                    top: 10rem;
+                    left: 85rem;
+                }
+                @include mobile {
+                    height: 350rem;
+                    width: auto;
+                    top: 10rem;
+                    left: 70rem;
+                }
+            }
+        }
+    }
+}
+
+.welcome-wave {
+    position: absolute;
+    left: -150rem;
+    top: 70rem;
+    @include desktop-small {
+        left: -90rem;
+    }
+    @include tablet {
+        left: 20rem;
+        top: 80rem;
+        svg {
+			width: 61rem;
+		}
+    }
+    @include mobile {
+        left: 80rem;
+    }
+}
+.welcome-circle {
+    position: absolute;
+    right: 5rem;
+    top: 40rem;
+    @include desktop-small {
+        right: -17rem;
+    }
+    @include tablet {
+        right: 70rem;
+        top: 70rem;
+        svg {
+			width: 39rem;
+		}
+    }
+
+ }
+.welcome-triangle { 
+    position: absolute;
+    left: -200rem;
+    bottom: 20rem;
+    @include desktop-small {
+        left: -120rem;
+    }
+    @include tablet {
+        left: 56rem;
+        bottom: 60rem;
+        svg {
+            width: 66rem;
+            height: auto;
+        }
+    }
+    @include mobile {
+        left: 68rem;
+        bottom: 0;
+    }
+}
+.welcome-plus { 
+    position: absolute;
+    right: 10rem;
+    bottom: 60rem;
+    @include desktop-small {
+        right: -40rem;
+    }
+    @include tablet {
+        right: 40rem;
+        bottom: 120rem;
+        svg {
+            width: 28rem;
+            height: auto;
+        }
+    }
+    @include mobile {
+        right: 60rem;
+        bottom: 10rem;
+    }
+}
+
+.welcome-shadow-left {
+    position: absolute;
+    top: -350rem;
+    border-radius: 233rem;
+    width: 467rem;
+    height: 1234rem;
+    filter: blur(300px);
+    background: linear-gradient(180deg, rgba(84, 84, 212, 0.27) 0%, rgba(84, 84, 212, 0.27) 100%);
+    transform: rotate(-54deg);
+    @include tablet {
+        width: 400rem;
+        height: 1100rem;
+    }
+    @include tablet-small {
+        width: 300rem;
+        height: 830rem;
+        transform: rotate(-44deg);
+    }
+    @include mobile {
+        width: 180rem;
+        height: 600rem;
+        transform: rotate(-37deg);
+        top: -70rem;
+        left: 20rem;
+    }
+}
+
