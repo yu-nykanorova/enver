@@ -1,6 +1,5 @@
 .service {
-	margin-top: 150rem;
-	margin-bottom: 150rem;
+	padding-top: 150rem;
 	position: relative;
 
 	&__title {
@@ -15,9 +14,9 @@
 	&-triangle {
 		position: absolute;
 		left: 44rem;
-		top: -33rem;
+		top: 120rem;
 		@include tablet {
-			top: -79rem;
+			top: 75rem;
 			left: 66rem;
 			svg {
 				width: 66rem;
@@ -28,11 +27,11 @@
 	&-plus-top {
 		position: absolute;
 		right: 0;
-		top: 80rem;
+		top: 230rem;
 		transform: rotate(-31deg);
 		@include tablet {
 			right: 0;
-			top: 140rem;
+			top: 290rem;
 			transform: rotate(0);
 			svg {
 				width: 28rem;

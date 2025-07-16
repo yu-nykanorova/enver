@@ -1,8 +1,7 @@
 .welcome {
     display: flex;
     align-items: center;
-    margin-top: 130rem;
-    margin-bottom: 150rem;
+    padding-top: 150rem;
     justify-content: space-between;
     gap: 50rem;
     
@@ -51,6 +50,8 @@
         gap: 8rem;
         padding: 16rem 27rem;
         max-width: 204rem;
+        position: relative;
+        z-index: 10;
     }
 
 	&__image {
@@ -192,107 +193,109 @@
             }
         }
     }
-}
 
-.welcome-wave {
-    position: absolute;
-    left: -150rem;
-    top: 70rem;
-    @include desktop-small {
-        left: -90rem;
-    }
-    @include tablet {
-        left: 20rem;
-        top: 80rem;
-        svg {
-			width: 61rem;
-		}
-    }
-    @include mobile {
-        left: 80rem;
-    }
-}
-.welcome-circle {
-    position: absolute;
-    right: 5rem;
-    top: 40rem;
-    @include desktop-small {
-        right: -17rem;
-    }
-    @include tablet {
-        right: 70rem;
+    &-wave {
+        position: absolute;
+        left: -150rem;
         top: 70rem;
-        svg {
-			width: 39rem;
-		}
+        @include desktop-small {
+            left: -90rem;
+        }
+        @include tablet {
+            left: 20rem;
+            top: 80rem;
+            svg {
+                width: 61rem;
+            }
+        }
+        @include mobile {
+            left: 80rem;
+        }
     }
-
- }
-.welcome-triangle { 
-    position: absolute;
-    left: -200rem;
-    bottom: 20rem;
-    @include desktop-small {
-        left: -120rem;
+    &-circle {
+        position: absolute;
+        right: 5rem;
+        top: 40rem;
+        @include desktop-small {
+            right: -17rem;
+        }
+        @include tablet {
+            right: 70rem;
+            top: 70rem;
+            svg {
+                width: 39rem;
+            }
+        }
+    
+     }
+    &-triangle { 
+        position: absolute;
+        left: -200rem;
+        bottom: 20rem;
+        @include desktop-small {
+            left: -120rem;
+        }
+        @include tablet {
+            left: 56rem;
+            bottom: 60rem;
+            svg {
+                width: 66rem;
+                height: auto;
+            }
+        }
+        @include mobile {
+            left: 68rem;
+            bottom: 0;
+        }
     }
-    @include tablet {
-        left: 56rem;
+    &-plus { 
+        position: absolute;
+        right: 10rem;
         bottom: 60rem;
-        svg {
-            width: 66rem;
-            height: auto;
+        @include desktop-small {
+            right: -40rem;
+        }
+        @include tablet {
+            right: 40rem;
+            bottom: 120rem;
+            svg {
+                width: 28rem;
+                height: auto;
+            }
+        }
+        @include mobile {
+            right: 60rem;
+            bottom: 10rem;
         }
     }
-    @include mobile {
-        left: 68rem;
-        bottom: 0;
-    }
-}
-.welcome-plus { 
-    position: absolute;
-    right: 10rem;
-    bottom: 60rem;
-    @include desktop-small {
-        right: -40rem;
-    }
-    @include tablet {
-        right: 40rem;
-        bottom: 120rem;
-        svg {
-            width: 28rem;
-            height: auto;
+    &-shadow-left {
+        position: absolute;
+        top: -350rem;
+        border-radius: 233rem;
+        width: 467rem;
+        height: 1234rem;
+        filter: blur(300px);
+        background: linear-gradient(180deg, rgba(84, 84, 212, 0.27) 0%, rgba(84, 84, 212, 0.27) 100%);
+        transform: rotate(-54deg);
+        z-index: -1;
+        @include tablet {
+            width: 400rem;
+            height: 1100rem;
         }
-    }
-    @include mobile {
-        right: 60rem;
-        bottom: 10rem;
+        @include tablet-small {
+            width: 300rem;
+            height: 830rem;
+            transform: rotate(-44deg);
+        }
+        @include mobile {
+            width: 180rem;
+            height: 600rem;
+            transform: rotate(-37deg);
+            top: -70rem;
+            left: 20rem;
+        }
     }
 }
 
-.welcome-shadow-left {
-    position: absolute;
-    top: -350rem;
-    border-radius: 233rem;
-    width: 467rem;
-    height: 1234rem;
-    filter: blur(300px);
-    background: linear-gradient(180deg, rgba(84, 84, 212, 0.27) 0%, rgba(84, 84, 212, 0.27) 100%);
-    transform: rotate(-54deg);
-    @include tablet {
-        width: 400rem;
-        height: 1100rem;
-    }
-    @include tablet-small {
-        width: 300rem;
-        height: 830rem;
-        transform: rotate(-44deg);
-    }
-    @include mobile {
-        width: 180rem;
-        height: 600rem;
-        transform: rotate(-37deg);
-        top: -70rem;
-        left: 20rem;
-    }
-}
+
 

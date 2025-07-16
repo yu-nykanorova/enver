@@ -1,58 +1,62 @@
 .portfolio {
 	margin-bottom: 168rem;
+	padding-top: 150rem;
 	position: relative;
 	@include tablet {
 		margin-bottom: 130rem;
 	}
-}
 
-.portfolio-list {
-	margin-top: 70rem;
-}
-.portfolio-item {
-	padding: 24px;
-	display: inline-flex;
-	border-radius: 14rem;
-	background: #1E1E20;
-	transition: var(--transition);
-	img {
-		border-radius: 12rem;
-	}
-	&:hover {
-		transform: scale(1.02);
-	}
-}
-
-.portfolio-circle {
-	position: absolute;
-	top: 40rem;
-	right: 160rem;	
-	transform: rotate(-27deg);
-	@include desktop-small {
-		right: 110rem;
-	}
-	@include tablet {
-		right: 60rem;
-	}
-	@include tablet-small {
-		top: 80rem;
-		svg {
-			width: 39rem;
+	&-container {
+		&__list {
+			margin-top: 70rem;
+		}
+		&__item {
+			padding: 24px;
+			display: inline-flex;
+			border-radius: 14rem;
+			background: #1E1E20;
+			transition: var(--transition);
+			img {
+				border-radius: 12rem;
+			}
+			&:hover {
+				transform: scale(1.02);
+			}
 		}
 	}
-	@include mobile {
-		top: 50rem;
-	}
-}
 
-.portfolio-wave {
-	position: absolute;
-	bottom: -36rem;
-	left: 80rem;
-	@include tablet-small {
-		left: 50rem;
-		svg {
-			width: 61rem;
+	&-circle {
+		position: absolute;
+		top: 190rem;
+		right: 160rem;	
+		transform: rotate(-27deg);
+		@include desktop-small {
+			right: 110rem;
+		}
+		@include tablet {
+			right: 60rem;
+		}
+		@include tablet-small {
+			top: 230rem;
+			svg {
+				width: 39rem;
+			}
+		}
+		@include mobile {
+			top: 200rem;
+		}
+	}
+	
+	&-wave {
+		position: absolute;
+		bottom: -36rem;
+		left: 80rem;
+		@include tablet-small {
+			left: 50rem;
+			svg {
+				width: 61rem;
+			}
 		}
 	}
 }
+

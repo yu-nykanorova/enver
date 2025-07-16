@@ -1,23 +1,42 @@
 export default function header() {
 	const section = $("section[id]");
 	const navLinks = $(".header__a");
+	const burgerMenu = $(".header__burger");
+
+	function setActiveLink(id) {
+		navLinks.removeClass("active-link");
+		$('.header__a[href="#' + id + '"]').addClass("active-link");
+	}
 
 	$(window).on("scroll", function() {
-		const scrollPosition = $(document).scrollTop();
+		
+		const scrollPosition = $(window).scrollTop();
+		const headerHeight = 130;
+
+		let currentSectionId = null;
+		let minDistance = Infinity;
 
 		section.each(function () {
-			const top = $(this).offset().top;
-			const bottom = top + $(this).outerHeight();
-			const id = $(this).attr("id");
+			const sectionTop = $(this).offset().top - headerHeight;
+			const distance = Math.abs(scrollPosition - sectionTop);
 
-			if (scrollPosition >= top && scrollPosition < bottom) {
-				navLinks.removeClass("active-link");
-				$('.header__a[href="#' + id + '"]').addClass("active-link");
+			if (distance < minDistance) {
+				minDistance = distance;
+				currentSectionId = $(this).attr("id");
 			}
 		});
+
+		if (currentSectionId) {
+			setActiveLink(currentSectionId);
+		}
 	});
 
-	$(".header__burger").click(function(event){
+	navLinks.on("click", function() {
+		const targetId = $(this).attr("href").replace("#", "");
+		setActiveLink(targetId);
+	});
+
+	burgerMenu.click(function() {
 		$(".header__burger, .header__nav").toggleClass("active-burger");
 		$("body").toggleClass("lock");
 	});

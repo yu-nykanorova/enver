@@ -1,8 +1,10 @@
 .why {
+    padding-top: 150rem;
 	&__info { 
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 24rem;
         margin-bottom: 50rem;
         @include tablet {
             flex-direction: column;
