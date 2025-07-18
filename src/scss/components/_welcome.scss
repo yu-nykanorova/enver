@@ -6,8 +6,8 @@
     gap: 50rem;
     
     @include tablet {
-        display: flex;
-        flex-direction: column; 
+        flex-direction: column-reverse; 
+        padding-top: 80rem;
     }
     @include mobile {
         margin-bottom: 80rem; 
@@ -51,14 +51,14 @@
         padding: 16rem 27rem;
         max-width: 204rem;
         position: relative;
-        z-index: 10;
+        z-index: 5;
     }
 
 	&__image {
         position: relative;
         height: 650rem;
         width: 500rem;
-        @include mobile {
+        @include tablet {
             height: 500rem;
             width: 450rem;
         }
@@ -237,7 +237,7 @@
         }
         @include tablet {
             left: 56rem;
-            bottom: 60rem;
+            bottom: -80rem;
             svg {
                 width: 66rem;
                 height: auto;
@@ -257,7 +257,7 @@
         }
         @include tablet {
             right: 40rem;
-            bottom: 120rem;
+            bottom: -30rem;
             svg {
                 width: 28rem;
                 height: auto;

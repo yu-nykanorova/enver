@@ -85,8 +85,6 @@ gulp.task('images:prod', function () {
 		.pipe(changed('./prod/img/'))
 		.pipe(webp())
 		.pipe(gulp.dest('./prod/img/'))
-		.pipe(gulp.src('./src/img/**/*'))
-		.pipe(changed('./prod/img/'))
 		.pipe(imagemin({ verbose: true }))
 		.pipe(gulp.dest('./prod/img/'));
 });
@@ -118,6 +116,7 @@ gulp.task('js:prod', function () {
 const serverOptions = {
 	livereload: true,
 	open: true,
+	browser: "chrome",
 };
 
 gulp.task('server:prod', function () {

@@ -5,9 +5,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 10;
     background-color: var(--c-dark-second);
-    backdrop-filter: blur(2px);
 
     &__container {
         display: flex;
@@ -44,7 +43,7 @@
             @include tablet {
                 position: fixed;
                 top: 50rem;
-                left: calc(50% - 8rem);
+                right: 50rem;
             }
         }
 
@@ -114,6 +113,9 @@
             background: rgba(25, 25, 27, 0.9);
             z-index: 3;
             padding: 70rem 10rem 20rem 10rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         &.active-burger {
@@ -129,7 +131,6 @@
 
         @include tablet {
             flex-direction: column;
-            margin-top: 50rem;
         }
     }
 
@@ -153,7 +154,7 @@
         }
 
         @include tablet {
-            font-size: 20rem;
+            font-size: 24rem;
             color: var(--c-white);
         }
     }
