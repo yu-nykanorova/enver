@@ -24,13 +24,18 @@ Getting Started:
 ```bash
 git clone https://github.com/yu-nykanorova/enver.git
 cd enver
+```
 
 2) Install Dependencies
 Make sure you have Node.js and npm installed, then run:
+```bash
 npm install
+```
 
 3) Run the Project Locally:
+```bash
 npx gulp
+```
 This command will:
 - Compile SCSS into CSS
 - Copy HTML and assets into the /build folder
