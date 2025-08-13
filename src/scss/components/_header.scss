@@ -4,6 +4,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     width: 100%;
     z-index: 10;
     background-color: var(--c-dark-second);
@@ -20,10 +21,11 @@
 		align-items: center;
 		font-family: var(--font-therd);
 		font-weight: 700;
-		font-size: 28px;
+		font-size: 28rem;
 		line-height: 140%;
 		color: var(--c-white);
         transition: var(--transition);
+
 		&:hover {
 			transform: scale(1.05);
 		}
@@ -31,6 +33,10 @@
         img {
             width: 40rem;
             height: 40rem;
+            @include mobile {
+                width: 30rem;
+                height: 30rem;
+            }
         }
     }
 
@@ -38,8 +44,6 @@
 		display: none;
 
         &.active-burger {
-            right: 0;
-
             @include tablet {
                 position: fixed;
                 top: 50rem;
@@ -68,10 +72,11 @@
 		@include tablet {
 			display: block;
 			position: relative;
+            margin-right: 4rem;
             cursor: pointer;
 			width: 16rem;
 			height: 24rem;
-            z-index: 4;
+            z-index: 10;
 			 
 			&::before,
 			&::after,
@@ -80,7 +85,7 @@
 				background: var(--c-white);
 				position: absolute;
 				height: 2rem;
-				right: 4rem;
+				right: 0;
                 border-radius: 2rem;
                 transition: var(--transition);
 			}
@@ -111,7 +116,7 @@
             width: 100%;
             height: 100%;
             background: rgba(25, 25, 27, 0.9);
-            z-index: 3;
+            z-index: 7;
             padding: 70rem 10rem 20rem 10rem;
             display: flex;
             justify-content: center;
@@ -154,7 +159,7 @@
         }
 
         @include tablet {
-            font-size: 24rem;
+            font-size: 20rem;
             color: var(--c-white);
         }
     }

@@ -55,6 +55,9 @@ body {
 		&:hover {
 			box-shadow: 0 0 7rem var(--c-text-white);
 		}
+		@include mobile {
+			padding: 9rem 20rem;
+		}
 	}
 }
 

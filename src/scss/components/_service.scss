@@ -23,6 +23,9 @@
 				height: auto;
 			}
 		}
+		@include mobile {
+			left: 0;
+		}
 	}
 	&-plus-top {
 		position: absolute;
@@ -107,7 +110,12 @@
 		font-weight: 400;
 		font-size: 20rem;
 		line-height: 28rem;
-		letter-spacing: -0.500211rem;
+		letter-spacing: -0.5rem;
 		color: var(--c-text-white);
+
+		@include mobile {
+			max-width: 270rem;
+			margin-inline: auto;
+		}
 	}
 }

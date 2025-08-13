@@ -1,5 +1,9 @@
 .why {
     padding-top: 150rem;
+
+    @include mobile {
+        padding-top: 60rem;
+    }
 	&__info { 
         display: flex;
         align-items: center;

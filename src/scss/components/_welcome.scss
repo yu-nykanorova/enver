@@ -6,14 +6,16 @@
     gap: 50rem;
     
     @include tablet {
-        flex-direction: column-reverse; 
-        padding-top: 80rem;
+        flex-direction: column; 
+        padding-top: 180rem;
     }
     @include mobile {
-        margin-bottom: 80rem; 
+        margin-bottom: 60rem;
+        padding-top: 130rem;
+        overflow: hidden;
     }
 
-	&__info { 
+	&__info {
         max-width: 50%;
         position: relative;
         @include tablet {
@@ -62,6 +64,9 @@
             height: 500rem;
             width: 450rem;
         }
+        @include mobile {
+            width: 300rem;
+        }
     }
 
     .empty-square {
@@ -82,9 +87,10 @@
             left: 88rem;
         }
         @include mobile {
-            height: 230rem;
-            width: 230rem;
-            left: 108rem;
+            height: 220rem;
+            width: 220rem;
+            left: 30rem;
+            top: 140rem;
         }
     }
 
@@ -106,9 +112,10 @@
             left: 106rem;
         }
         @include mobile {
-            height: 230rem;
-            width: 230rem;
-            left: 126rem;
+            height: 220rem;
+            width: 220rem;
+            left: 40rem;
+            top: 180rem;
         }
     }
 
@@ -131,9 +138,10 @@
             left: 106rem;
         }
         @include mobile {
-            height: 230rem;
-            width: 230rem;
-            left: 126rem;
+            height: 220rem;
+            width: 220rem;
+            left: 40rem;
+            top: 180rem;
         }
     }
 
@@ -159,10 +167,10 @@
             top: 119rem;
         }
         @include mobile {
-            height: 320rem;
-            width: 320rem;
-            left: 56rem;
-            top: 109rem;
+            height: 400rem;
+            width: 250rem;
+            left: 4rem;
+            top: 102rem;
         }
 
         .image {
@@ -172,6 +180,10 @@
                 overflow: hidden;
                 height: 363rem;
                 width: 380rem;
+            }
+            @include mobile {
+                height: 290rem;
+                width: auto;
             }
             img {
                 transform: rotate(-24deg);
@@ -185,10 +197,9 @@
                     left: 85rem;
                 }
                 @include mobile {
-                    height: 350rem;
-                    width: auto;
-                    top: 10rem;
-                    left: 70rem;
+                    height: 320rem;
+                    top: 0;
+                    left: 0;
                 }
             }
         }
@@ -209,7 +220,7 @@
             }
         }
         @include mobile {
-            left: 80rem;
+            left: 0;
         }
     }
     &-circle {
@@ -226,7 +237,9 @@
                 width: 39rem;
             }
         }
-    
+        @include mobile {
+            right: 0;
+        }
      }
     &-triangle { 
         position: absolute;
@@ -244,7 +257,7 @@
             }
         }
         @include mobile {
-            left: 68rem;
+            left: 0;
             bottom: 0;
         }
     }
@@ -264,8 +277,8 @@
             }
         }
         @include mobile {
-            right: 60rem;
-            bottom: 10rem;
+            right: 0;
+            bottom: 80rem;
         }
     }
     &-shadow-left {
@@ -288,8 +301,8 @@
             transform: rotate(-44deg);
         }
         @include mobile {
-            width: 180rem;
-            height: 600rem;
+            width: 120rem;
+            height: 500rem;
             transform: rotate(-37deg);
             top: -70rem;
             left: 20rem;

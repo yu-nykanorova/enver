@@ -5,10 +5,16 @@
 	@include tablet {
 		margin-bottom: 130rem;
 	}
+	@include mobile {
+		padding-top: 140rem;
+	}
 
 	&-container {
 		&__list {
 			margin-top: 70rem;
+			@include mobile {
+				margin-top: 50rem;
+			}
 		}
 		&__item {
 			padding: 24px;

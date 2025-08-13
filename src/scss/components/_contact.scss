@@ -3,6 +3,10 @@
     margin-bottom: 50rem;
     position: relative;
 
+    @include mobile {
+        margin-bottom: 140rem;
+    }
+
     .contact-container {
         padding-top: 187rem;
         padding-bottom: 189rem;
@@ -21,8 +25,8 @@
             flex-direction: column;
             align-items: flex-start;
             gap: 50rem;
-            padding-top: 50rem;
-            padding-bottom: 50rem;
+            padding-top: 80rem;
+            padding-bottom: 80rem;
         }
 
         &__title { 
